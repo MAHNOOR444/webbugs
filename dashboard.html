@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        
+        <aside class="sidebar" id="sidebar">
+            <div style="margin-bottom: 24px; font-size: 20px; font-weight: 700; color: #ffffff;">TaskFlow</div>
+            
+            <a href="dashbaord.html" class="active"> Dashboard</a>
+            <a href="tasks.html"> Tasks</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="team.html"> Team</a>
+            <a href="settings.html"> Settings</a>
+
+            <div class="sidebar-bottom">
+                <div class="dark-mode-toggle">
+                    <span>Dark Mode</span>
+                    <div class="toggle-switch" id="darkModeToggle"></div>
+                </div>
+                <div class="upgrade-card">
+                    <h4>Upgrade to Pro</h4>
+                    <p>Unlock all features and get more from TaskFlow.</p>
+                    <button class="upgrade-btn">Upgrade Now</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-header">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                    <div class="search-bar">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search tasks, projects, people...">
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <div class="notification-icon"></div>
+                    <div class="user-profile">
+                        <div class="avatar">A</div>
+                        <div class="user-info">
+                            <span class="user-name">Admin</span>
+                            <span class="user-role">Administrator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-title">
+                <h1>Dashboard</h1>
+                <p>Welcome back!</p>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-details">
+                        <span class="stat-label">Total Tasks</span>
+                        <span class="stat-value">3</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-details">
+                        <span class="stat-label">Completed</span>
+                        <span class="stat-value">1</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-details">
+                        <span class="stat-label">In Progress</span>
+                        <span class="stat-value">1</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-details">
+                        <span class="stat-label">Overdue</span>
+                        <span class="stat-value">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="left-col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Tasks Overview</h3>
+                            <a href="tasks.html" class="view-all-link">View All Tasks →</a>
+                        </div>
+                        <div class="kanban-board">
+                            <div class="kanban-col">
+                                <div class="kanban-col-header">
+                                    <span class="col-title">To Do <span class="count">1</span></span>
+                                </div>
+                                <div class="kanban-cards">
+                                    <div class="task-card">
+                                        <h4>minahil</h4>
+                                        <p>description</p>
+                                        <span class="task-status todo">Pending</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kanban-col">
+                                <div class="kanban-col-header">
+                                    <span class="col-title">In Progress <span class="count">1</span></span>
+                                </div>
+                                <div class="kanban-cards">
+                                    <div class="task-card">
+                                        <h4>fahad</h4>
+                                        <p>nothing else</p>
+                                        <span class="task-status in-progress">In Progress</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kanban-col done-col">
+                                <div class="kanban-col-header">
+                                    <span class="col-title">Done <span class="count">1</span></span>
+                                </div>
+                                <div class="kanban-cards">
+                                    <div class="task-card">
+                                        <h4>Mahnoor</h4>
+                                        <p>login page</p>
+                                        <span class="task-status done">Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Calendar</h3>
+                        </div>
+                        <div class="cal-month">August 2026</div>
+                        <div class="calendar-grid">
+                            <span class="day-name">S</span><span class="day-name">M</span>
+                            <span class="day-name">T</span><span class="day-name">W</span>
+                            <span class="day-name">T</span><span class="day-name">F</span><span class="day-name">S</span>
+                            <span class="day prev-month">26</span><span class="day prev-month">27</span>
+                            <span class="day prev-month">28</span><span class="day prev-month">29</span>
+                            <span class="day prev-month">30</span><span class="day prev-month">31</span>
+                            <span class="day">1</span>
+                            <span class="day">2</span><span class="day">3</span><span class="day">4</span>
+                            <span class="day">5</span><span class="day">6</span><span class="day">7</span><span class="day">8</span>
+                            <span class="day active">9</span><span class="day">10</span><span class="day">11</span>
+                            <span class="day">12</span><span class="day">13</span><span class="day">14</span><span class="day">15</span>
+                            <span class="day">16</span><span class="day">17</span><span class="day">18</span>
+                            <span class="day">19</span><span class="day">20</span><span class="day">21</span><span class="day">22</span>
+                            <span class="day">23</span><span class="day">24</span><span class="day">25</span>
+                            <span class="day">26</span><span class="day">27</span><span class="day">28</span><span class="day">29</span>
+                            <span class="day">30</span><span class="day">31</span>
+                            <span class="day next-month">1</span><span class="day next-month">2</span>
+                            <span class="day next-month">3</span><span class="day next-month">4</span><span class="day next-month">5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="app-footer">© 2026 TaskFlow. All rights reserved.</footer>
+        </main>
+    </div>
+
+    <script src="../js/pages.js"></script>
+</body>
+</html>

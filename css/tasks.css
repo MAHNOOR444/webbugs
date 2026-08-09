@@ -1,0 +1,284 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+body{
+background:#f5f7fb;
+color:#222;
+}
+.sidebar{
+width:220px;
+height:100vh;
+background:#1e293b;
+padding:25px 15px;
+position:fixed;
+display:flex;
+flex-direction:column;
+overflow:hidden;
+}
+.sidebar a{
+display:block;
+color:#cbd5e1;
+text-decoration:none;
+padding:12px;
+margin:5px 0;
+border-radius:6px;
+text-align:center;
+transition:all 0.2s;
+}
+.sidebar a:hover,.sidebar a.active{
+background:#3b82f6;
+color:white;
+}
+
+.sidebar-bottom {
+    margin-top:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding-top:24px;
+    border-top:1px solid #334155;
+    flex-shrink:0;
+}
+
+.dark-mode-toggle {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:#94a3b8;
+    font-size:14px;
+    font-weight:500;
+}
+
+.upgrade-card {
+    background:linear-gradient(145deg,#1e293b,#0f172a);
+    border:1px solid #334155;
+    border-radius:16px;
+    padding:20px;
+    text-align:left;
+}
+
+.upgrade-card h4 {
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.upgrade-card p {
+    color:#94a3b8;
+    font-size:13px;
+    line-height:1.5;
+    margin-bottom:16px;
+}
+
+.upgrade-btn {
+    width:100%;
+    padding:10px;
+    background:#6366f1;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.help-support {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#94a3b8;
+    font-size:14px;
+    font-weight:500;
+    cursor:pointer;
+    text-align:center;
+    justify-content:center;
+}
+
+.main{
+margin-left:220px;
+width:calc(100% - 220px);
+padding:25px;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+}
+.navbar{
+background:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-radius:8px;
+}
+.navbar button{
+border:0;
+padding:8px 12px;
+border-radius:5px;
+}
+.task-header{
+margin:30px 0 20px;
+}
+.task-header p{
+color:#777;
+margin-top:5px;
+}
+.task-form{
+background:white;
+padding:20px;
+border-radius:8px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:20px;
+width:100%;
+}
+.task-form input,.task-form select{
+padding:12px;
+border:1px solid #ddd;
+border-radius:6px;
+flex:1;
+min-width:180px;
+}
+.task-form button{
+background:#3b82f6;
+color:white;
+border:0;
+padding:12px 18px;
+border-radius:6px;
+cursor:pointer;
+}
+.tools{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:20px;
+width:100%;
+}
+.tools input,.tools select{
+padding:12px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+.tools input{
+flex:1;
+min-width:180px;
+}
+.tasks{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:15px;
+width:100%;
+}
+.task-card{
+background:white;
+padding:20px;
+border-radius:8px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+gap:12px;
+box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+.task-card h3{
+margin:0;
+font-size:18px;
+}
+.task-card p{
+color:#475569;
+margin:0;
+}
+.pending,.completed{
+display:inline-block;
+padding:8px 12px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+}
+.pending{
+background:#fef3c7;
+color:#92400e;
+}
+.completed{
+background:#d1fae5;
+color:#065f46;
+}
+/* Dark Mode Styles for Tasks Page */
+html.dark-mode body {
+    background:#0f172a;
+    color:#f1f5f9;
+}
+
+html.dark-mode .sidebar {
+    background:#020617;
+}
+
+html.dark-mode .navbar {
+    background:#1e293b;
+    color:#f1f5f9;
+}
+
+html.dark-mode .task-form {
+    background:#1e293b;
+    color:#f1f5f9;
+}
+
+html.dark-mode .task-form input,
+html.dark-mode .task-form select {
+    background:#334155;
+    color:#f1f5f9;
+    border-color:#475569;
+}
+
+html.dark-mode .task-form input::placeholder {
+    color:#94a3b8;
+}
+
+html.dark-mode .tools input,
+html.dark-mode .tools select {
+    background:#334155;
+    color:#f1f5f9;
+    border-color:#475569;
+}
+
+html.dark-mode .task-card {
+    background:#1e293b;
+    color:#cbd5e1;
+    box-shadow:0 2px 6px rgba(0,0,0,0.3);
+}
+
+html.dark-mode .task-card h3 {
+    color:#f1f5f9;
+}
+
+html.dark-mode .task-card p {
+    color:#94a3b8;
+}
+
+@media(max-width:700px){
+.sidebar{
+width:100%;
+height:auto;
+position:relative;
+}
+.sidebar a{
+display:inline-block;
+}
+body{
+display:block;
+}
+.main{
+margin-left:0;
+width:100%;
+}
+.task-form{
+flex-direction:column;
+}
+.task-card{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+}

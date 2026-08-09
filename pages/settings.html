@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a href="/dashbaord.html">Dashboard</a>
+        <a href="/pages/tasks.html">Tasks</a>
+        <a href="/pages/calendar.html">Calendar</a>
+        <a href="/pages/team.html">Team</a>
+        <a href="/pages/settings.html" class="active">Settings</a>
+        <div class="sidebar-bottom">
+            <div class="dark-mode-toggle">
+                <span>Dark Mode</span>
+                <span class="toggle-switch"></span>
+            </div>
+            <div class="upgrade-card">
+                <h4>Upgrade to Pro</h4>
+                <p>Unlock all features and get more from TaskFlow.</p>
+                <button class="upgrade-btn">Upgrade Now</button>
+            </div>
+            <div class="help-support">Help & Support</div>
+            <a href="/dashbaord.html" style="text-align: center;">Logout</a>
+        </div>
+    </aside>
+    <main class="main">
+        <section class="task-header">
+            <div>
+                <h2>Settings</h2>
+                <p>Update your preferences and account settings.</p>
+            </div>
+        </section>
+        <form id="settingsForm" class="form-group">
+            <div class="setting-row">
+                <div class="form-field">
+                    <label for="profileName">Name</label>
+                    <input type="text" id="profileName" placeholder="Your name">
+                </div>
+                <div class="form-field">
+                    <label for="profileEmail">Email</label>
+                    <input type="email" id="profileEmail" placeholder="Your email">
+                </div>
+                <div class="form-field">
+                    <label for="profileRole">Role</label>
+                    <input type="text" id="profileRole" placeholder="Your role">
+                </div>
+            </div>
+            <div class="form-row">
+               
+                <div class="button-field">
+                    <button type="submit" class="button-primary">Save Settings</button>
+                </div>
+            </div>
+            <div id="settingsStatus" class="settings-status"></div>
+        </form>
+    </main>
+    <script src="../js/pages.js"></script>
+</body>
+</html>

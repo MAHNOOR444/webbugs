@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a href="/dashbaord.html">Dashboard</a>
+        <a href="/pages/tasks.html">Tasks</a>
+        <a href="/pages/calendar.html">Calendar</a>
+        <a href="/pages/team.html" class="active">Team</a>
+        <a href="/pages/settings.html">Settings</a>
+        <div class="sidebar-bottom">
+            <div class="dark-mode-toggle">
+                <span>Dark Mode</span>
+                <span class="toggle-switch"></span>
+            </div>
+            <div class="upgrade-card">
+                <h4>Upgrade to Pro</h4>
+                <p>Unlock all features and get more from TaskFlow.</p>
+                <button class="upgrade-btn">Upgrade Now</button>
+            </div>
+            <div class="help-support">Help & Support</div>
+            <a href="/dashbaord.html" style="text-align: center;">Logout</a>
+        </div>
+    </aside>
+    <main class="main">
+        <section class="task-header">
+            <div>
+                <h2>Team</h2>
+                <p>Add and manage your team members.</p>
+            </div>
+        </section>
+        <form id="teamForm" class="form-group">
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="teamName">Name</label>
+                    <input type="text" id="teamName" placeholder="Enter team member name" required>
+                </div>
+                <div class="form-field">
+                    <label for="teamRole">Role</label>
+                    <input type="text" id="teamRole" placeholder="Enter team member role" required>
+                </div>
+                <div class="button-field">
+                    <button type="submit" class="button-primary">Add Team Member</button>
+                </div>
+            </div>
+        </form>
+        <div id="teamList" class="team-panel"></div>
+    </main>
+    <script src="../js/pages.js"></script>
+</body>
+</html>

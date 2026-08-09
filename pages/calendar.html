@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a href="/dashbaord.html">Dashboard</a>
+        <a href="/pages/tasks.html">Tasks</a>
+        <a href="/pages/calendar.html" class="active">Calendar</a>
+        <a href="/pages/team.html">Team</a>
+        <a href="/pages/settings.html">Settings</a>
+        <div class="sidebar-bottom">
+            <div class="dark-mode-toggle">
+                <span>Dark Mode</span>
+                <span class="toggle-switch"></span>
+            </div>
+            <div class="upgrade-card">
+                <h4>Upgrade to Pro</h4>
+                <p>Unlock all features and get more from TaskFlow.</p>
+                <button class="upgrade-btn">Upgrade Now</button>
+            </div>
+            <div class="help-support">Help & Support</div>
+            <a href="/dashbaord.html" style="text-align: center;">Logout</a>
+        </div>
+    </aside>
+    <main class="main">
+        <section class="task-header">
+            <div>
+                <h2>Calendar</h2>
+            </div>
+        </section>
+        <div class="calendar-panel">
+            <div class="calendar-display-panel">
+                <div class="calendar-box">
+                    <div class="calendar-nav button-group">
+                        <button id="prevMonth" class="button-primary">Prev</button>
+                        <button id="nextMonth" class="button-primary">Next</button>
+                    </div>
+                    <h3 id="calendarMonthYear">August 2026</h3>
+                    <div class="calendar-grid" id="calendarGrid"></div>
+                </div>
+            </div>
+            <div class="calendar-events-panel">
+                <div class="event-list-panel">
+                    <h3>Upcoming Events</h3>
+                    <div id="eventList"></div>
+                </div>
+                <div class="event-form-card">
+                    <h3>Add Event</h3>
+                    <form id="eventForm" class="form-group">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="eventTitle">Event Title</label>
+                                <input type="text" id="eventTitle" placeholder="Enter event title" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="eventDate">Event Date</label>
+                                <input type="date" id="eventDate" required>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="eventDescription">Description</label>
+                            <textarea id="eventDescription" rows="4" placeholder="Enter event description"></textarea>
+                        </div>
+                        <div class="button-field">
+                            <button type="submit" class="button-primary">Add Event</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/pages.js"></script>
+</body>
+</html>
